@@ -38,17 +38,25 @@ html, body {
 .navigator {display: flex; padding: 1rem; flex: 1; background: var(--primary); box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);}
 .navigator__list {display: flex; gap: 1rem; flex: 1;}
 .navigator__list > li {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
-    list-style: none; 
+    list-style: none;
     font-weight: 500;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
     transition: 0.1s ease-in-out;
     color: var(--font-color-light);
     user-select: none;
     cursor: pointer;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-color-light);
+    flex: 100%;
 }
 .navigator__list > li:hover {background: rgba(0, 0, 0, 0.1);}
 .navigator__title {display: flex; justify-content: center; align-items: center; flex: 1.5;}

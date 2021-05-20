@@ -10,24 +10,37 @@ public class Client {
     @Id
     private UUID id;
 
+    private String name;
     private String phone;
     private String email;
     private String passport;
 
-    public Client(String phone, String email, String passport) {
+    public Client(String name, String phone, String email, String passport) {
+        this.name = name;
         this.phone = phone;
         this.email = email;
         this.passport = passport;
     }
 
-    public Client(UUID id, String phone, String email, String passport) {
+    public Client(UUID id, String name, String phone, String email, String passport) {
         this.id = id;
+        this.name = name;
         this.phone = phone;
         this.email = email;
         this.passport = passport;
     }
 
     public Client() {
+    }
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public UUID getId() {

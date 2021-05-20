@@ -1,21 +1,15 @@
-package com.task.haulmonttest.controller;
+package com.task.haulmonttest.credit;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("")
-public class MainController {
+@RequestMapping("credits")
+public class CreditController {
 
-    @GetMapping("clients")
-    public String clientListPage(){
-        return "client_list";
-    }
-
-    @GetMapping("credits")
+    @GetMapping
     public String creditListPage(){
         return "credit_list";
     }
-
 }

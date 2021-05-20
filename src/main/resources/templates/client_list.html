@@ -18,9 +18,9 @@
         <div class="navigator">
             <ul class="navigator__list">
 
-                <li><a href="clients">Список клиентов</a></li>
-                <li><a href="credits">Список кредитов</a> </li>
-                <li><a th:href="">Кредитные предложения</a></li>
+                <li><a class="link" th:href="@{clients}">Список клиентов</a></li>
+                <li><a class="link" th:href="@{credits}">Список кредитов</a> </li>
+                <li><a class="link" th:href="@{credit_offers}">Кредитные предложения</a></li>
 
             </ul>    
             <div class="navigator__title">
@@ -33,21 +33,23 @@
                     <thead>
                       <tr>
                         <th>№</th>
-                        <th>First</th>
-                        <th>Last</th>
-                        <th>Handle</th>
+                        <th>ФИО</th>
+                        <th>Почта</th>
+                        <th>Пасспорт</th>
+                        <th>Телефон</th>
                         <th></th>
                         <th></th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody th:each="el : ${clients}">
                       <tr>
-                        <th>1</th>
-                        <td>asasasasasasasas</td>
-                        <td>Sasasas</td>
-                        <td>asasasasasassaasasasass</td>
-                        <td><a class="edit">Редактировать</a></td>
-                        <td><button class="remove">Удалить</button></td>
+                        <th th:text="${el.getId()}">1</th>
+                        <td th:text="${el.getName()}">asasasasasasasas</td>
+                        <td th:text="${el.getEmail()}">Sasasas</td>
+                        <td th:text="${el.getPassport()}">asasasasasassaasasasass</td>
+                        <td th:text="${el.getPhone()}">asasasasasassaasasasass</td>
+                        <td><a class="edit" th:href="@{clientEdit}">Редактировать</a></td>
+                        <td><button class="remove" type="submit">Удалить</button></td>
                       </tr>
                     </tbody>
                 </table>
