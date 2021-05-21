@@ -18,7 +18,7 @@
         <div class="navigator">
             <ul class="navigator__list">
 
-                <li><a class="link" th:href="@{clients}">Список клиентов</a></li>
+                <li><a class="link" th:href="@{/}">Список клиентов</a></li>
                 <li><a class="link" th:href="@{credits}">Список кредитов</a> </li>
                 <li><a class="link" th:href="@{credit_offers}">Кредитные предложения</a></li>
 
@@ -28,7 +28,32 @@
             </div>
         </div>
         <div class="container">
-
+            <div class="table-box">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>ФИО</th>
+                        <th>Почта</th>
+                        <th>Пасспорт</th>
+                        <th>Телефон</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody th:each="el : ${clients}">
+                    <tr>
+                        <th th:text="${el.getId()}">1</th>
+                        <td th:text="${el.getName()}">asasasasasasasas</td>
+                        <td th:text="${el.getEmail()}">Sasasas</td>
+                        <td th:text="${el.getPassport()}">asasasasasassaasasasass</td>
+                        <td th:text="${el.getPhone()}">asasasasasassaasasasass</td>
+                        <td><a class="edit" th:href="@{clientEdit}">Редактировать</a></td>
+                        <td><button class="remove" type="submit">Удалить</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>

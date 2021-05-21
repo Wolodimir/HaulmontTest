@@ -16,6 +16,7 @@ public class PaymentTable {
     private Double creditBody;
     private Double creditPercent;
 
+
     public PaymentTable(Date paymentDate, Double paymentAmount, Double creditBody, Double creditPercent) {
         this.paymentDate = paymentDate;
         this.paymentAmount = paymentAmount;

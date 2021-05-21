@@ -2,9 +2,11 @@ package com.task.haulmonttest.credit;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity
+@Table(name = "crd")
 public class Credit {
 
     @Id
@@ -12,6 +14,7 @@ public class Credit {
 
     private Long limit;
     private Double interestRate;
+
 
     public Credit(Long limit, Double interestRate) {
         this.limit = limit;
